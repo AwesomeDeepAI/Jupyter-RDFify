@@ -40,7 +40,7 @@ def draw_graph(g, logger, shorten_uris=True, rename_blank_nodes=True):
     logger.out(dot)
 
 
-def parse_graph(string, logger, fmt="xml"):
+def parse_graph(string, logger, fmt="ttl"):
     try:
         return rdflib.Graph().parse(data=string, format=fmt)
     except Exception as err:
